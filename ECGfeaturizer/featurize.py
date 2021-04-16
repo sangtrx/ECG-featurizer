@@ -649,7 +649,8 @@ class get_features:
         feature_df = feature_df.iloc[:counter_auto_annotated,:]
         feature_df.columns = FeatureNames
         feature_df['Labels'] = labels_auto_annotated
-
+        feature_df['file_name'] = str(ecgfilename)
+        
         self.features_out = feature_df
         self.files_for_manual_annotation = np.asarray(ecg_file_not_annotated)
         self.labels_for_manual_annotation = np.asarray(labels_not_annotated)
