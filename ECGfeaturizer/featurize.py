@@ -105,6 +105,7 @@ class get_features:
         labels_auto_annotated = []
         labels_not_annotated = []
         ecg_file_not_annotated = []
+        file_name = []
         for ecg_file in features:
             counter_all = counter_all + 1
 
@@ -615,7 +616,7 @@ class get_features:
                     continue
 
                 labels_auto_annotated.append(header_data[15][5:-1])
-
+                file_name.append(ecgfilename)
 
 
                 temp_array=np.asarray([gender,age,heartrate_std,heartrate_median,heartrate_min,heartrate_max,mean_heartrate_r, rmssd,r_amp_II_std,r_amp_II_min,r_amp_II_min, r_amp_leads[0],r_amp_leads[1],r_amp_leads[2],r_amp_leads[3],r_amp_leads[4],
@@ -649,7 +650,7 @@ class get_features:
         feature_df = feature_df.iloc[:counter_auto_annotated,:]
         feature_df.columns = FeatureNames
         feature_df['Labels'] = labels_auto_annotated
-        feature_df['file_name'] = str(ecgfilename)
+        feature_df['file_name'] = file_name
         
         self.features_out = feature_df
         self.files_for_manual_annotation = np.asarray(ecg_file_not_annotated)
