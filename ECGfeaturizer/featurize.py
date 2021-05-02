@@ -454,19 +454,19 @@ class get_features:
                 fs = 500
 
 
-                age = header_data[13][6:-1]
-                if age == 'NaN':
-                    age = -1
-                age = int(age)
+#                 age = header_data[13][6:-1]
+#                 if age == 'NaN':
+#                     age = -1
+#                 age = int(age)
 
-                gender = header_data[14][6:-1]
-                if gender == "Female" or "female" or "F":
-                    gender = 1
-                if gender == "Male" or "male" or "M":
-                    gender = 0
-                if gender == "NaN":
-                    gender = 2
-                gender = int(gender)
+#                 gender = header_data[14][6:-1]
+#                 if gender == "Female" or "female" or "F":
+#                     gender = 1
+#                 if gender == "Male" or "male" or "M":
+#                     gender = 0
+#                 if gender == "NaN":
+#                     gender = 2
+#                 gender = int(gender)
 
 
                 try:
@@ -620,7 +620,7 @@ class get_features:
                 file_name2.append(ecgfilename)
 
 
-                temp_array=np.asarray([gender,age,heartrate_std,heartrate_median,heartrate_min,heartrate_max,mean_heartrate_r, rmssd,r_amp_II_std,r_amp_II_min,r_amp_II_min, r_amp_leads[0],r_amp_leads[1],r_amp_leads[2],r_amp_leads[3],r_amp_leads[4],
+                temp_array=np.asarray([heartrate_std,heartrate_median,heartrate_min,heartrate_max,mean_heartrate_r, rmssd,r_amp_II_std,r_amp_II_min,r_amp_II_min, r_amp_leads[0],r_amp_leads[1],r_amp_leads[2],r_amp_leads[3],r_amp_leads[4],
                     r_amp_leads[5],r_amp_leads[6], r_amp_leads[7],r_amp_leads[8], r_amp_leads[9], r_amp_leads[10], r_amp_leads[11],p_offset_std,p_offset_median,p_offset_min,p_offset_max,mean_p_offset,p_onsets_std, p_onsets_median,
                     p_onsets_min,p_onsets_max,mean_p_onsets,ECG_baseline,p_rate_std,p_rate_median,p_rate_min,p_rate_max,mean_p_rate,p_amp_leads[0],p_amp_leads[1],p_amp_leads[2],p_amp_leads[3],p_amp_leads[4],p_amp_leads[5],
                     p_amp_leads[6],p_amp_leads[7],p_amp_leads[8],p_amp_leads[9],p_amp_leads[10],p_amp_leads[11],q_rate_std,q_rate_median,q_rate_min,q_rate_max,mean_q_rate, q_amp_leads[0],q_amp_leads[1],q_amp_leads[2],q_amp_leads[3],
@@ -638,7 +638,7 @@ class get_features:
                 print("{} out of {} succeeded".format(counter_auto_annotated,counter_all))
 
 
-        FeatureNames = ['gender','age','R HR STD','R HR median','R HR min', 'R HR max','R HR mean','RMSSD','R amp II std','R amp II min','R amp II min_2', 'R amp leads I', 'R amp leads II', 'R amp lead III', 
+        FeatureNames = [,'R HR STD','R HR median','R HR min', 'R HR max','R HR mean','RMSSD','R amp II std','R amp II min','R amp II min_2', 'R amp leads I', 'R amp leads II', 'R amp lead III', 
                 'R amp lead aVR','R amp lead aVL','R amp lead aVF', 'R amp V1','R amp V2','R amp V3','R amp V4','R amp V5','R amp V6','p_offset_std','p_offset_median','p_offset_min','p_offset_max',
                 'mean_p_offset','p_onsets_std','p_onsets_median','p_onsets_min','p_onsets_max','mean_p_onsets','ECG_baseline','p_rate_std','p_rate_median','p_rate_min','p_rate_max','mean_p_rate', 
                 'P amp leads I', 'P amp leads II', 'P amp lead III', 'P amp lead aVR','P amp lead aVL','P amp lead aVF', 'P amp V1','P amp V2','P amp V3','P amp V4','P amp V5','P amp V6','q_rate_std',
