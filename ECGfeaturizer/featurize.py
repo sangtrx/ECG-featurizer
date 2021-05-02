@@ -638,7 +638,7 @@ class get_features:
                 print("{} out of {} succeeded".format(counter_auto_annotated,counter_all))
 
 
-        FeatureNames = [,'R HR STD','R HR median','R HR min', 'R HR max','R HR mean','RMSSD','R amp II std','R amp II min','R amp II min_2', 'R amp leads I', 'R amp leads II', 'R amp lead III', 
+        FeatureNames = ['R HR STD','R HR median','R HR min', 'R HR max','R HR mean','RMSSD','R amp II std','R amp II min','R amp II min_2', 'R amp leads I', 'R amp leads II', 'R amp lead III', 
                 'R amp lead aVR','R amp lead aVL','R amp lead aVF', 'R amp V1','R amp V2','R amp V3','R amp V4','R amp V5','R amp V6','p_offset_std','p_offset_median','p_offset_min','p_offset_max',
                 'mean_p_offset','p_onsets_std','p_onsets_median','p_onsets_min','p_onsets_max','mean_p_onsets','ECG_baseline','p_rate_std','p_rate_median','p_rate_min','p_rate_max','mean_p_rate', 
                 'P amp leads I', 'P amp leads II', 'P amp lead III', 'P amp lead aVR','P amp lead aVL','P amp lead aVF', 'P amp V1','P amp V2','P amp V3','P amp V4','P amp V5','P amp V6','q_rate_std',
